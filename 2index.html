@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>New transaction</title>
+      <link rel="stylesheet" href="./2style.css" />
+      <script src="https://kit.fontawesome.com/790d8ffa8c.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="transaction">
+         <button class="close">
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #764920"></i>
+         </button>
+         <h1>New transaction</h1>
+         <div class="source">
+            <label for="Income">Income </label>
+            <input type="radio" value="income" id="Income" name="source" />
+
+            <label for="Expence">Expence </label>
+            <input type="radio" value="expence" id="Expence" name="source" />
+         </div>
+         <div class="category">
+            <label for="category">Category: </label>
+            <select id="category">
+               <option value="empty" selected disabled>Select one</option>
+            </select>
+         </div>
+         <div class="source">
+            <label for="date">Select date: </label>
+            <input type="date" id="date" />
+         </div>
+         <div class="source">
+            <label for="amount">Amount: </label>
+            <input type="number" id="amount" />
+         </div>
+         <button class="submit">Submit</button>
+      </div>
+      <script src="./2script.js"></script>
+   </body>
+</html>

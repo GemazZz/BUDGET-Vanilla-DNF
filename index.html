@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/790d8ffa8c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header">
+      <p><i class="fa-solid fa-chart-pie" style="color: #764920"></i> Budget App</p>
+      <button class="btn1">Add New Transaction</button>
+      <button class="btn2"><i class="fa-solid fa-user fa-2xl" style="color: #764920"></i></button>
+    </div>
+    <div class="main">
+      <div class="filter">
+        <label for="data">Created at: </label>
+        <input type="date" id="date" />
+
+        <label for="type">Type: </label>
+        <div id="type">
+          <label for="Income">Income </label>
+          <input type="radio" value="income" id="Income" name="source" />
+
+          <label for="Expence">Expence </label>
+          <input type="radio" value="expence" id="Expence" name="source" />
+        </div>
+        <label for="category">Category: </label>
+        <select id="category">
+          <option value="empty" selected disabled>Select one</option>
+        </select>
+
+        <label for="">Min: </label>
+        <input type="number" id="min" />
+
+        <label for="">Max: </label>
+        <input type="number" id="max" />
+
+        <button class="filterBtn">Filter</button>
+      </div>
+      <div class="content"></div>
+      <div class="stats">
+        <div class="difference">
+          <div class="statsDiv">
+            <p class="greenIncome">Income:</p>
+            <p class="greenIncome" id="sumIncome">0</p>
+          </div>
+          <div class="statsDiv">
+            <p>Difference:</p>
+            <p id="sumDif">0</p>
+          </div>
+          <div class="statsDiv">
+            <p class="redIncome">Expence:</p>
+            <p class="redIncome" id="sumExpence">0</p>
+          </div>
+        </div>
+        <div class="categoryStats">
+          <h1>Stats:</h1>
+          <p>Salary: <span id="spanSalary">360</span></p>
+          <p>Check: <span id="spanCheck">230</span></p>
+          <p>Gym: <span id="spanGym">290</span></p>
+          <p>Shopping: <span id="spanShopping">130</span></p>
+          <p>Family: <span id="spanFamily">420</span></p>
+          <p>Others: <span id="spanOthers">30</span></p>
+        </div>
+        <div class="top3">
+          <h1>Top 3:</h1>
+          <p>I. <span id="spanTop1"></span></p>
+          <p>II. <span id="spanTop2"></span></p>
+          <p>III. <span id="spanTop3"></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
